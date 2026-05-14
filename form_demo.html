@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Form Demo</title>
+</head>
+
+<body>
+
+    <h1>HTML Form Elements Demonstration</h1>
+    <p>This page demonstrates all common HTML form input types and attributes using only pure HTML.</p>
+
+    <form action="#" method="post">
+
+        <!-- Basic Text Inputs Section -->
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <label for="fname">First Name (Autofocus):</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name" autofocus required><br><br>
+
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name" required><br><br>
+
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd" placeholder="Enter password" required><br><br>
+
+            <label for="hidden_field">Hidden Field (not visible):</label>
+            <input type="hidden" id="hidden_field" name="hidden_field" value="secret_value">
+        </fieldset>
+
+        <br>
+
+        <!-- Contact and Search Section -->
+        <fieldset>
+            <legend>Contact & Search</legend>
+
+            <label for="user_email">Email Address:</label><br>
+            <input type="email" id="user_email" name="user_email" placeholder="example@domain.com" required><br><br>
+
+            <label for="phone">Phone Number (tel):</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890"><br><br>
+
+            <label for="website">Website URL:</label><br>
+            <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+
+            <label for="site_search">Search Site:</label><br>
+            <input type="search" id="site_search" name="site_search" placeholder="Search..."><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Numeric and Range Section -->
+        <fieldset>
+            <legend>Numbers and Ranges</legend>
+
+            <label for="quantity">Quantity (number):</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br><br>
+
+            <label for="satisfaction">Satisfaction Level (range):</label><br>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+
+            <label for="favcolor">Favorite Color (color picker):</label><br>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Date and Time Section -->
+        <fieldset>
+            <legend>Dates and Times</legend>
+
+            <label for="birthday">Birthday (date):</label><br>
+            <input type="date" id="birthday" name="birthday"><br><br>
+
+            <label for="appt">Appointment Time (time):</label><br>
+            <input type="time" id="appt" name="appt"><br><br>
+
+            <label for="meeting">Meeting (datetime-local):</label><br>
+            <input type="datetime-local" id="meeting" name="meeting"><br><br>
+
+            <label for="birthmonth">Birth Month (month):</label><br>
+            <input type="month" id="birthmonth" name="birthmonth"><br><br>
+
+            <label for="vacation">Vacation Week (week):</label><br>
+            <input type="week" id="vacation" name="vacation"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Selection and File Section -->
+        <fieldset>
+            <legend>Choices and Files</legend>
+
+            <h2>Radio Buttons</h2>
+            <p>Please select your gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <h2>Checkboxes</h2>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" checked>
+            <label for="vehicle2"> I have a car (Checked by default)</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br><br>
+
+            <label for="cars">Choose a car (Dropdown):</label><br>
+            <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat" selected>Fiat (Selected by default)</option>
+                <option value="audi">Audi</option>
+            </select><br><br>
+
+            <label for="browser_choice">Choose a browser from the list (Datalist):</label><br>
+            <input list="browsers" name="browser" id="browser_choice">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist><br><br>
+
+            <label for="myfile">Select a file (file):</label><br>
+            <input type="file" id="myfile" name="myfile"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Textarea and Special Attributes Section -->
+        <fieldset>
+            <legend>Feedback and Restrictions</legend>
+
+            <label for="message">Message (textarea):</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"
+                placeholder="Type your message here..."></textarea><br><br>
+
+            <label for="read_only_field">Read-Only Field:</label><br>
+            <input type="text" id="read_only_field" name="read_only_field" value="You cannot change this"
+                readonly><br><br>
+
+            <label for="disabled_field">Disabled Field:</label><br>
+            <input type="text" id="disabled_field" name="disabled_field" value="This is disabled" disabled><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Form Submission Section -->
+        <fieldset>
+            <legend>Actions</legend>
+
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Reset Form">
+            <br><br>
+            <button type="button">Generic Button (Type Button)</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
